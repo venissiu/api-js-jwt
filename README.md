@@ -104,7 +104,7 @@ Ao iniciar este projeto você concorda com as diretrizes do Código de Conduta e
   <summary><strong>‼️ Antes de começar a desenvolver</strong></summary>
 
 1. Clone o repositório
-  * `git clone https://github.com/tryber/sd-020-b-project-blogs-api.git`.
+  * `git clone git@github.com:tryber/sd-020-b-project-blogs-api.git`.
   * Entre na pasta do repositório que você acabou de clonar:
     * `cd sd-020-b-project-blogs-api`
 
@@ -1027,7 +1027,7 @@ Ao iniciar este projeto você concorda com as diretrizes do Código de Conduta e
 
 - ☝ Não esqueça de validar o `token` neste requisito, como descrito na seção de [Validando token nas requisições](#validandoToken);
 - O endpoint deve ser acessível através do URL `/post`;
-- O endpoint deve ser capaz de trazer todos os bogs post, user dono dele e as categorias do banco de dados;
+- O endpoint deve ser capaz de trazer todos os blogs post, user dono dele e as categorias do banco de dados;
 
 <details>
   <summary><strong>Os seguintes pontos serão avaliados</strong></summary>
