@@ -1027,7 +1027,7 @@ Ao iniciar este projeto você concorda com as diretrizes do Código de Conduta e
 
 - ☝ Não esqueça de validar o `token` neste requisito, como descrito na seção de [Validando token nas requisições](#validandoToken);
 - O endpoint deve ser acessível através do URL `/post`;
-- O endpoint deve ser capaz de trazer todos os bogs post, user dono dele e as categorias do banco de dados;
+- O endpoint deve ser capaz de trazer todos os blogs post, user dono dele e as categorias do banco de dados;
 
 <details>
   <summary><strong>Os seguintes pontos serão avaliados</strong></summary>
