@@ -11,7 +11,7 @@ const userService = {
         return createdUser;
     },
     findAll: async () => {
-        const users = await User.findAll();
+        const users = await User.findAll({ attributes: { exclude: ['password'] } });
         return { users };
       },
     findById: async (id) => {
