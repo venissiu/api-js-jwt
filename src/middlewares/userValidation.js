@@ -27,7 +27,9 @@ const userMiddleware = (request, response, next) => {
   const { error } = userValidation(newUserInformation);
   if (error) { 
     const [code, message] = error.message.split('/');
-    console.log(message);
+    if (!message) {
+      return response.status(400).json({ message: code });
+    }
     return response.status(code).json({ message });
   }
   next();
