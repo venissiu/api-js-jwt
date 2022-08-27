@@ -9,6 +9,7 @@ const apiRoutes = express.Router();
 // não remova a variável `API_PORT` ou o `listen`
 const port = process.env.API_PORT || 3000;
 apiRoutes.get('/user', validateJWT, routes.user.findAll);
+apiRoutes.get('/user/:id', validateJWT, routes.user.findById);
 apiRoutes.post('/login', routes.login);
 apiRoutes.post('/user', userMiddleware, routes.user.create);
 app.use(apiRoutes);
