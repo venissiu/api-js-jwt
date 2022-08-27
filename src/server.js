@@ -13,6 +13,7 @@ apiRoutes.get('/user/:id', validateJWT, routes.user.findById);
 apiRoutes.get('/categories', validateJWT, routes.categories.findAll);
 apiRoutes.post('/categories', validateJWT, routes.categories.create);
 apiRoutes.get('/post', validateJWT, routes.post.findAll);
+apiRoutes.get('/post/:id', validateJWT, routes.post.findById);
 apiRoutes.post('/login', routes.login);
 apiRoutes.post('/user', userMiddleware, routes.user.create);
 app.use(apiRoutes);
