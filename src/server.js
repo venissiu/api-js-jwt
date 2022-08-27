@@ -10,6 +10,7 @@ const apiRoutes = express.Router();
 const port = process.env.API_PORT || 3000;
 apiRoutes.get('/user', validateJWT, routes.user.findAll);
 apiRoutes.get('/user/:id', validateJWT, routes.user.findById);
+apiRoutes.get('/categories', validateJWT, routes.categories.findAll);
 apiRoutes.post('/login', routes.login);
 apiRoutes.post('/user', userMiddleware, routes.user.create);
 app.use(apiRoutes);
