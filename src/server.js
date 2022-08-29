@@ -8,14 +8,15 @@ const { userMiddleware } = require('./middlewares/userValidation');
 const apiRoutes = express.Router();
 // não remova a variável `API_PORT` ou o `listen`
 const port = process.env.API_PORT || 3000;
+apiRoutes.post('/login', routes.login);
 apiRoutes.get('/user', validateJWT, routes.user.findAll);
 apiRoutes.get('/user/:id', validateJWT, routes.user.findById);
+apiRoutes.post('/user', userMiddleware, routes.user.create);
 apiRoutes.get('/categories', validateJWT, routes.categories.findAll);
 apiRoutes.post('/categories', validateJWT, routes.categories.create);
 apiRoutes.get('/post', validateJWT, routes.post.findAll);
 apiRoutes.get('/post/:id', validateJWT, routes.post.findById);
-apiRoutes.post('/login', routes.login);
-apiRoutes.post('/user', userMiddleware, routes.user.create);
+apiRoutes.post('/post', validateJWT, routes.post.create);
 app.use(apiRoutes);
 // não remova esse endpoint
 app.get('/', (_request, response) => {

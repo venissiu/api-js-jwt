@@ -13,7 +13,6 @@ module.exports = async (req, res, next) => {
 
   try {
     const decoded = jwt.verify(token, segredo);
-    console.log(token, segredo);
     const user = await User.findOne({ where: { email: decoded.data.email } });
     if (!user) {
       return res
