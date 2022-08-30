@@ -1,6 +1,5 @@
 const jwt = require('jsonwebtoken');
 const postService = require('../services/postService');
-const userService = require('../services/userService');
 
 const segredo = process.env.JWT_SECRET;
 
@@ -46,6 +45,26 @@ const postController = {
     }
     await postService.delete(idPostToDelete);
     res.status(204).send();
+  },
+  update: async (req, res) => {
+    const idPostToUpdate = req.params.id; const { title, content } = req.body;
+    if (!title || !content) {
+      return res.status(400).json({ message: 'Some required fields are missing' });
+    }
+    const token = req.headers.authorization; const decoded = jwt.verify(token, segredo);
+    const userId = decoded.data.id;
+    const { post } = await postService
+    .findById(idPostToUpdate);
+    if (post === null) {
+      return res.status(404).json({ message: 'Post does not exist' });
+    }
+    const { dataValues: { user: { id: userIdOfPost } } } = post;
+    if (userIdOfPost !== userId) {
+      return res.status(401).json({ message: 'Unauthorized user' });
+    }
+    const postUpdated = await post.update({ title, content, post });
+     postUpdated.userId = userId;
+    return res.status(200).json(postUpdated);
   },
 };
 

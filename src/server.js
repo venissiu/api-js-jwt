@@ -18,6 +18,7 @@ apiRoutes.get('/post', validateJWT, routes.post.findAll);
 apiRoutes.get('/post/:id', validateJWT, routes.post.findById);
 apiRoutes.post('/post', validateJWT, routes.post.create);
 apiRoutes.delete('/post/:id', validateJWT, routes.post.delete);
+apiRoutes.put('/post/:id', validateJWT, routes.post.update);
 app.use(apiRoutes);
 // não remova esse endpoint
 app.get('/', (_request, response) => {
