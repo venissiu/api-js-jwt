@@ -65,6 +65,10 @@ const postService = {
     await postCategoryService.createRelations(postCreated.dataValues.id, categoryIds);
     return postCreated;
   },
+  delete: async (id) => {
+    console.log(id);
+    await BlogPost.destroy({ where: { id } });
+  },
 };
 
 module.exports = postService;
