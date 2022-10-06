@@ -70,7 +70,6 @@ const postService = {
     await BlogPost.destroy({ where: { id } });
   },
   update: async (title, content, id) => {
-    console.log(title, content);
     await BlogPost.update({ title, content }, { where: { id } });
     const { dataValues: updatedPost } = await BlogPost.findByPk(id);
     return updatedPost;

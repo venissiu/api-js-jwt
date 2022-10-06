@@ -1,7 +1,5 @@
-// ./auth/validateJWT.js
 const jwt = require('jsonwebtoken');
-
-const { User } = require('../database/models');
+const { User } = require('../../database/models');
 
 const segredo = process.env.JWT_SECRET;
 
@@ -10,7 +8,6 @@ module.exports = async (req, res, next) => {
   if (!token) {
     return res.status(401).json({ message: 'Token not found' });
   }
-
   try {
     const decoded = jwt.verify(token, segredo);
     const user = await User.findOne({ where: { email: decoded.data.email } });
