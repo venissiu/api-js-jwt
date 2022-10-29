@@ -24,6 +24,8 @@ services:
   db:
     container_name: blogs_api_db
     image: mysql:8.0.21
+    security_opt:
+    - seccomp:unconfined
     platform: linux/x86_64
     restart: always
     ports:
