@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 const postService = require('../services/postService');
-const rescue = require('../rescue');
+const rescue = require('../helpers/rescue');
 
 const segredo = process.env.JWT_SECRET;
 

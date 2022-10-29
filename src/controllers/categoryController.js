@@ -1,5 +1,5 @@
 const categoryService = require('../services/categoryService');
-const rescue = require('../rescue');
+const rescue = require('../helpers/rescue');
 
 const userController = {
   findAll: rescue(async (req, res) => {

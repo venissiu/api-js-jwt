@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const rescue = require('../rescue');
+const rescue = require('../helpers/rescue');
 
 const secret = process.env.JWT_SECRET;
 const userService = require('../services/userService');
@@ -19,9 +19,6 @@ const userController = {
   create: rescue(async (req, res) => {
     const { email, password, displayName, image } = req.body;
     const user = await userService.create({ email, password, displayName, image });
-    if (user.code) {
-      return res.status(user.code).json({ message: user.error });
-    }
     const jwtConfig = { expiresIn: '1d', algorithm: 'HS256' };
     const token = jwt.sign({ data: user }, secret, jwtConfig);
     res.status(201).json({ token });
