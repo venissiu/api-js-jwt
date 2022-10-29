@@ -1,11 +1,12 @@
 const { User } = require('../database/models');
+const CustomError = require('../error/CustomError');
 
 const userService = {
   create: async (newUser) => {
     const { email, password, displayName, image } = newUser;
     const emailAlreadyExists = await User.findOne({ where: { email } });
     if (emailAlreadyExists) {
-      return { code: 409, error: 'User already registered' };
+      throw new CustomError(409, 'User already registered');
     }
     const createdUser = await User.create({ displayName, email, password, image });
     return createdUser;
