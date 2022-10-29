@@ -1,5 +1,4 @@
 const jwt = require('jsonwebtoken');
-const bcrypt = require('bcryptjs');
 const rescue = require('../rescue');
 
 const secret = process.env.JWT_SECRET;
@@ -19,9 +18,7 @@ const userController = {
   }),
   create: rescue(async (req, res) => {
     const { email, password, displayName, image } = req.body;
-    const salt = bcrypt.genSaltSync();
-    const passwordHashed = bcrypt.hashSync(password, salt);
-    const user = await userService.create({ email, password: passwordHashed, displayName, image });
+    const user = await userService.create({ email, password, displayName, image });
     if (user.code) {
       return res.status(user.code).json({ message: user.error });
     }
