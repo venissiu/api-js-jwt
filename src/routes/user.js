@@ -5,7 +5,7 @@ const { userMiddleware } = require('../middlewares/userValidation');
 
 const userRoutes = express.Router();
 
-userRoutes.post('/user', userMiddleware, user.create);
-userRoutes.get('/user', validateJWT, user.findAll);
-userRoutes.get('/user/:id', validateJWT, user.findById);
+userRoutes.post('/', userMiddleware, user.create);
+userRoutes.get('/', validateJWT, user.findAll);
+userRoutes.get('/:id', validateJWT, user.findById);
 module.exports = userRoutes;
