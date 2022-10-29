@@ -66,7 +66,6 @@ const postService = {
     return postCreated;
   },
   delete: async (id) => {
-    console.log(id);
     await BlogPost.destroy({ where: { id } });
   },
   update: async (title, content, id) => {
