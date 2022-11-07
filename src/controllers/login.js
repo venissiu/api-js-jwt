@@ -29,7 +29,7 @@ module.exports = async (req, res) => {
     }
     const jwtConfig = { expiresIn: '1d', algorithm: 'HS256',
     };
-    const token = jwt.sign({ data: user }, secret, jwtConfig);
+    const token = jwt.sign({ data: user.displayName }, secret, jwtConfig);
     return res.status(200).json({ token });
      } catch (err) {
     return res
