@@ -18,9 +18,18 @@ const userController = {
   }),
   create: rescue(async (req, res) => {
     const { email, password, displayName, image } = req.body;
-    const user = await userService.create({ email, password, displayName, image });
+    const user = await userService.create({
+      email,
+      password,
+      displayName,
+      image,
+    });
     const jwtConfig = { expiresIn: '1d', algorithm: 'HS256' };
-    const token = jwt.sign({ data: user }, secret, jwtConfig);
+    const token = jwt.sign(
+      { data: { name: user.displayName, email: user.email } },
+      secret,
+      jwtConfig,
+    );
     res.status(201).json({ token });
   }),
 };

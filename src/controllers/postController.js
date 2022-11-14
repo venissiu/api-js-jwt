@@ -1,6 +1,7 @@
 const jwt = require('jsonwebtoken');
 const postService = require('../services/postService');
 const rescue = require('../helpers/rescue');
+const userService = require('../services/userService');
 
 const segredo = process.env.JWT_SECRET;
 
@@ -43,7 +44,9 @@ const postController = {
     const idPostToDelete = req.params.id;
     const token = req.headers.authorization;
     const decoded = jwt.verify(token, segredo);
-    const userId = decoded.data.id;
+    const userEmail = decoded.data.email;
+    const { dataValues: { id: userId } } = await userService.findByEmail(userEmail);
+    console.log(userId);
     const { post } = await postService
     .findById(idPostToDelete);
     if (post === null) {
@@ -60,10 +63,11 @@ const postController = {
     const idPostToUpdate = req.params.id;
      const { title, content } = req.body;
     if (!validateBody(title, content, res)) return;
-    const token = req.headers.authorization; const decoded = jwt.verify(token, segredo);
-    const userId = decoded.data.id;
-    const { post } = await postService
-    .findById(idPostToUpdate);
+    const token = req.headers.authorization; 
+    const decoded = jwt.verify(token, segredo);
+    const userEmail = decoded.data.email;
+    const { dataValues: { id: userId } } = await userService.findByEmail(userEmail);
+    const { post } = await postService.findById(idPostToUpdate);
     if (post === null) {
       return res.status(404).json({ message: 'Post does not exist' });
     }

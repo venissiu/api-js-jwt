@@ -6,6 +6,7 @@ const {
 } = require('../database/models');
 const categoryService = require('./categoryService');
 const postCategoryService = require('./postCategoryService');
+const userService = require('./userService');
 
 const segredo = process.env.JWT_SECRET;
 
@@ -49,7 +50,8 @@ const postService = {
   create: async (newPostBlog, token) => {
     const decoded = jwt.verify(token, segredo);
     const { categoryIds } = newPostBlog;
-    const userId = decoded.data.id;
+    const userEmail = decoded.data.email;
+    const { dataValues: { id: userId } } = await userService.findByEmail(userEmail);
     const test = await Promise.all(categoryIds.map((id) => categoryService.findById(id)));
     const verifyIfCategoriesExists = test.some((category) => category.category === null);
     if (verifyIfCategoriesExists) {
