@@ -7,7 +7,7 @@ services:
     working_dir: /app
     volumes:
       - ./:/app
-    container_name: blogs_api
+    container_name: personal-api
     tty: true
     stdin_open: true
     command: bash
@@ -22,7 +22,7 @@ services:
       HOSTNAME: db
       JWT_SECRET: secretJWT
   db:
-    container_name: blogs_api_db
+    container_name: personal-api_db
     image: mysql:8.0.21
     security_opt:
     - seccomp:unconfined
