@@ -15,6 +15,13 @@ module.exports = {
         password: '123456',
         image: 'https://sportbuzz.uol.com.br/media/_versions/gettyimages-52491565_widelg.jpg',
       },
+      {
+        id: 3,
+        displayName: 'Usuario Teste',
+        email: 'example@email.com',
+        password: '1234567',
+        image: 'exemplo-link-imagem',
+      },
       ], { timestamps: false });
   },
 
