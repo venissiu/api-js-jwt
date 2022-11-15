@@ -26,8 +26,8 @@ Como rodar na sua máquina(docker)
     Clone o projeto "git clone git@github.com:NiiVx/api-js-jwt.git"
     Entre na pasta do projeto cd /api-js-jwt
     Rode o docker compose "docker-compose up"
-    Entre no container node, caso não tenha alterado nomes, estará "personal-api"
-    No container node, rode o "npm install", em seguida "npm run prestart" e depois "npm run seed", para estruturação do banco e povoamento do mesmo
+    Entre no container node "docker exec -it personal-api bash"
+    No container, rode o "npm install", em seguida "npm run prestart" e depois "npm run seed", para estruturação do banco e povoamento do mesmo
     Com o banco montado e sincronizado, você pode optar por rodar com o "npm start" ou "npm run debug" para levantar o servidor com nodemon. 
 
 
