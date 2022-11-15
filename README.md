@@ -6,7 +6,7 @@ Tecnologias utilizadas
 
     Node, Express, Sequelize, MYSQL, JOI, JWT
 
-Documentação feita no postman
+Para entender melhor o que cada rota faz e do que precisa ser passado em cada uma delas, recomendo a leitura da documentação que fiz no Postman:
 
 https://documenter.getpostman.com/view/22570620/2s8YmGTkic
 
