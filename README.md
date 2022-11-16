@@ -20,11 +20,18 @@ Como rodar na sua máquina(local)
 
     Configure o arquivo .env.example para .env e adicione suas variáveis para configuração do ambiente
     Clone o projeto 
-    `git clone git@github.com:NiiVx/api-js-jwt.git`
-    Entre na pasta do projeto `cd /api-js-jwt`
-    Rode `npm install` para instalar as dependências
-    Em seguida `npm run prestart` e `npm run seed`, para estruturação do banco e povoamento do mesmo
-    Com o banco montado e sincronizado, você pode optar por rodar com o `npm start` ou `npm run debug` para levantar o servidor com nodemon. 
+    *`git clone git@github.com:NiiVx/api-js-jwt.git`
+    Entre na pasta do projeto 
+    *`cd /api-js-jwt`
+    Para instalar as dependências use 
+    *`npm install`
+    Em seguida para estruturação do banco e povoamento do mesmo
+    *`npm run prestart`,
+    *`npm run seed` 
+    Com o banco montado e sincronizado, você pode optar por rodar com o 
+    *`npm start` 
+    Para levantar o servidor com nodemon
+    *`npm run debug` 
 
  
 Como rodar na sua máquina(docker)  
