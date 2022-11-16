@@ -8,7 +8,7 @@ Neste projeto foi implementado uma API com o intuito de gerênciar um blog gené
 
 Para entender melhor o que cada rota faz e do que precisa ser passado em cada uma delas, recomendo a leitura da documentação que fiz no Postman:
 
-[Postman](https://documenter.getpostman.com/view/22570620/2s8YmGTkic)
+[Documentação](https://documenter.getpostman.com/view/22570620/2s8YmGTkic)
 
 # Pré-requisitos
 
