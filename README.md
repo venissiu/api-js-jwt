@@ -17,7 +17,11 @@ Se faz necessário o node instalado caso decida rodar localmente
 Modificação do arquivo .env.example para .env e adição das suas variáveis para configuração do ambiente
 
 # Instalação
-### Como rodar na sua máquina de forma local
+### Como rodar na sua máquina 
+
+<details>
+<summary>Local</strong></summary>
+ 
 Clone o projeto 
  ``` 
  git clone git@github.com:NiiVx/api-js-jwt.git
@@ -45,8 +49,10 @@ Para levantar o servidor com nodemon
  ```
  npm run debug
  ``` 
-
- ### Como rodar na sua máquina com o Docker
+</details>
+  
+<details>
+<summary>Docker</strong></summary>
 
 DockerFile e Docker-Compose fornecidos pela Trybe, apenas algumas alterações minhas.
 
@@ -88,6 +94,5 @@ Para levantar o servidor com nodemon
 npm run debug
 ``` 
 
-
-
+</details
 
