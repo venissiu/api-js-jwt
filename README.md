@@ -6,13 +6,14 @@ Neste projeto foi implementado uma API com o intuito de gerênciar um blog gené
 
     Node, Express, Sequelize, MYSQL, JOI, JWT
 
-Para entender melhor o que cada rota faz e do que precisa ser passado em cada uma delas, recomendo a leitura da documentação que fiz no Postman:
+Para entender melhor o que cada rota faz e do que precisa ser passado em cada uma delas, recomendo a leitura da documentação que fiz no [Postman](https://documenter.getpostman.com/view/22570620/2s8YmGTkic)
 
-[Documentação](https://documenter.getpostman.com/view/22570620/2s8YmGTkic)
+
 
 # Pré-requisitos
 
 Se faz necessário o node instalado caso decida rodar localmente
+
 Modificação do arquivo .env.example para .env e adição das suas variáveis para configuração do ambiente
 
 # Instalação
@@ -70,15 +71,15 @@ No container, rode o
 ```
 npm install
 ```
-Em seguida
+Em seguida para estruturação do banco e povoamento do mesmo
 ```
 npm run prestart
 ```
 ```
 npm run seed
 ``` 
-Para estruturação do banco e povoamento do mesmo
-Com o banco montado e sincronizado, você pode optar por rodar com o 
+
+Com o banco montado e sincronizado, você pode inicializar o projeto
 ```
 npm start
 ``` 
