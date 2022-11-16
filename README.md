@@ -16,40 +16,76 @@ Se faz necessário o node instalado caso decida rodar localmente
 Modificação do arquivo .env.example para .env e adição das suas variáveis para configuração do ambiente
 
 # Instalação
+### Como rodar na sua máquina de forma local
+Clone o projeto 
+ ``` 
+ git clone git@github.com:NiiVx/api-js-jwt.git
+ ```
+Entre na pasta do projeto 
+ ```
+cd /api-js-jwt
+ ```
+Para instalar as dependências use 
+ ```
+ npm install
+ ```
+Em seguida para estruturação do banco e povoamento do mesmo
+ ```
+ npm run prestart
+ ```
+ ```
+ npm run seed
+ ``` 
+Com o banco montado e sincronizado, você pode optar por rodar com o 
+ ```
+ npm start
+ ``` 
+Para levantar o servidor com nodemon
+ ```
+ npm run debug
+ ``` 
 
-Como rodar na sua máquina(local)  
- Clone o projeto 
- ``` git clone git@github.com:NiiVx/api-js-jwt.git```
-  Entre na pasta do projeto 
-    ```cd /api-js-jwt```
-  Para instalar as dependências use 
-     ```npm install```
-    Em seguida para estruturação do banco e povoamento do mesmo
-    ```npm run prestart```,
-    ```npm run seed``` 
-    Com o banco montado e sincronizado, você pode optar por rodar com o 
-    ```npm start``` 
-    Para levantar o servidor com nodemon
-    ```npm run debug``` 
+ ### Como rodar na sua máquina com o Docker
 
- 
-Como rodar na sua máquina([Docker])  
+DockerFile e Docker-Compose fornecidos pela Trybe, apenas algumas alterações minhas.
 
-  DockerFile e Docker-Compose fornecidos pela Trybe, apenas algumas alterações minhas.
-    Clone o projeto 
-    ```git clone git@github.com:NiiVx/api-js-jwt.git```
-    Entre na pasta do projeto 
-    ```cd /api-js-jwt```
-    Rode o docker compose 
-    ```docker-compose up```
-    Entre no container node 
-    ```docker exec -it personal-api bash```
-    No container, rode o 
-    ```npm install```, em seguida ```npm run prestart``` e depois ```npm run seed```, para estruturação do banco e povoamento do mesmo
-    Com o banco montado e sincronizado, você pode optar por rodar com o 
-    ```npm start``` 
-    Para levantar o servidor com nodemon
-    ```npm run debug``` 
+
+Clone o projeto 
+```
+git clone git@github.com:NiiVx/api-js-jwt.git
+```
+Entre na pasta do projeto 
+```
+cd /api-js-jwt
+```
+Rode o docker compose 
+```
+docker-compose up
+```
+Entre no container node 
+```
+docker exec -it personal-api bash
+```
+No container, rode o 
+```
+npm install
+```
+Em seguida
+```
+npm run prestart
+```
+```
+npm run seed
+``` 
+Para estruturação do banco e povoamento do mesmo
+Com o banco montado e sincronizado, você pode optar por rodar com o 
+```
+npm start
+``` 
+Para levantar o servidor com nodemon
+```
+npm run debug
+``` 
 
 
 
