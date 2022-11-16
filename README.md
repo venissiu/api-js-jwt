@@ -24,7 +24,7 @@ Modificação do arquivo .env.example para .env e adição das suas variáveis p
  
 Clone o projeto 
  ``` 
- git clone git@github.com:NiiVx/api-js-jwt.git
+ git clone git@github.com:venissiu/api-js-jwt.git
  ```
 Entre na pasta do projeto 
  ```
