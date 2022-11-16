@@ -12,19 +12,22 @@ Para entender melhor o que cada rota faz e do que precisa ser passado em cada um
 
 # Pré-requisitos
 
-Se faz necessário o node instalado caso decida rodar localmente.
+Se faz necessário o node instalado caso decida rodar localmente
+Modificação do arquivo .env.example para .env e adição das suas variáveis para configuração do ambiente
 
 # Instalação
 
 Como rodar na sua máquina(local)  
-
-    Configure o arquivo .env.example para .env e adicione suas variáveis para configuração do ambiente
-    Clone o projeto 
-    *`git clone git@github.com:NiiVx/api-js-jwt.git`
-    Entre na pasta do projeto 
-    *`cd /api-js-jwt`
-    Para instalar as dependências use 
-    *`npm install`
+ Clone o projeto 
+ ```
+ git clone git@github.com:NiiVx/api-js-jwt.git
+```
+  Entre na pasta do projeto 
+  ```
+cd /api-js-jwt
+```
+  Para instalar as dependências use 
+    * `npm install`
     Em seguida para estruturação do banco e povoamento do mesmo
     *`npm run prestart`,
     *`npm run seed` 
