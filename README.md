@@ -19,33 +19,37 @@ Modificação do arquivo .env.example para .env e adição das suas variáveis p
 
 Como rodar na sua máquina(local)  
  Clone o projeto 
- ```
- git clone git@github.com:NiiVx/api-js-jwt.git
-```
+ ``` git clone git@github.com:NiiVx/api-js-jwt.git```
   Entre na pasta do projeto 
-  ```
-cd /api-js-jwt
-```
+    ```cd /api-js-jwt```
   Para instalar as dependências use 
-    * `npm install`
+     ```npm install```
     Em seguida para estruturação do banco e povoamento do mesmo
-    *`npm run prestart`,
-    *`npm run seed` 
+    ```npm run prestart```,
+    ```npm run seed``` 
     Com o banco montado e sincronizado, você pode optar por rodar com o 
-    *`npm start` 
+    ```npm start``` 
     Para levantar o servidor com nodemon
-    *`npm run debug` 
+    ```npm run debug``` 
 
  
-Como rodar na sua máquina(docker)  
+Como rodar na sua máquina([Docker])  
 
-    DockerFile e Docker-Compose fornecidos pela Trybe, apenas algumas alterações minhas.
-    Clone o projeto `git clone git@github.com:NiiVx/api-js-jwt.git`
-    Entre na pasta do projeto `cd /api-js-jwt`
-    Rode o docker compose `docker-compose up`
-    Entre no container node `docker exec -it personal-api bash`
-    No container, rode o `npm install`, em seguida `npm run prestart` e depois `npm run seed`, para estruturação do banco e povoamento do mesmo
-    Com o banco montado e sincronizado, você pode optar por rodar com o `npm start` ou `npm run debug` para levantar o servidor com nodemon. 
+  DockerFile e Docker-Compose fornecidos pela Trybe, apenas algumas alterações minhas.
+    Clone o projeto 
+    ```git clone git@github.com:NiiVx/api-js-jwt.git```
+    Entre na pasta do projeto 
+    ```cd /api-js-jwt```
+    Rode o docker compose 
+    ```docker-compose up```
+    Entre no container node 
+    ```docker exec -it personal-api bash```
+    No container, rode o 
+    ```npm install```, em seguida ```npm run prestart``` e depois ```npm run seed```, para estruturação do banco e povoamento do mesmo
+    Com o banco montado e sincronizado, você pode optar por rodar com o 
+    ```npm start``` 
+    Para levantar o servidor com nodemon
+    ```npm run debug``` 
 
 
 
