@@ -59,7 +59,7 @@ DockerFile e Docker-Compose fornecidos pela Trybe, apenas algumas alterações m
 
 Clone o projeto 
 ```
-git clone git@github.com:NiiVx/api-js-jwt.git
+git clone git@github.com:venissiu/api-js-jwt.git
 ```
 Entre na pasta do projeto 
 ```
